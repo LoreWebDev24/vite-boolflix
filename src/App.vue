@@ -1,7 +1,7 @@
 <script>
 // AXIOS
 // import axios from 'axios'
-// import store from '../store'
+import store from '../store'
 // COMPONENTS IMPORT ROUTE
 import AppHeader from "./components/AppHeader.vue"
 import AppContent from "./components/AppContent.vue"
@@ -9,7 +9,7 @@ import AppContent from "./components/AppContent.vue"
 export default {
   data() {
     return {
-      // store,
+      store,
     };
   },
   components: {
