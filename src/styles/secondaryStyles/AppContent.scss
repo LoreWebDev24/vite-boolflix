@@ -2,4 +2,17 @@
     height: calc(100vh - 80px) ;
     background-color: orange;
     overflow-y: scroll;
+    padding: 60px;
+}
+
+.card {
+    border: 1px solid black;
+    min-height: 300px;
+    padding: 30px;
+    margin-right: 20px;
+    border-radius: 18px;
+}
+
+.row {
+    row-gap: 20px;
 }

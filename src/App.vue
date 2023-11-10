@@ -1,6 +1,6 @@
 <script>
 // AXIOS
-// import axios from 'axios'
+import axios from 'axios'
 import store from '../store'
 // COMPONENTS IMPORT ROUTE
 import AppHeader from "./components/AppHeader.vue"
@@ -18,11 +18,11 @@ export default {
   },
   methods : {
     fetchMovies(){
-      axios.get('https://api.themoviedb.org/3/movie',{
+      axios.get('https://api.themoviedb.org/3/search/movie',{
         params: {
           api_key: this.store.api_key,
           query: this.store.userSearch,
-          language: 'it_IT'
+          language:'en'
         }
 
       })

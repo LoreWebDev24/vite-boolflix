@@ -15,17 +15,16 @@ export default {
     <div class="app-content">
       <div class="container">
         <div class="row">
-          <div class="col-4">
-            <!-- QUI MI CICLO IL TITOLO LA DESCRIZIONE IMG E LINGUA DEL FILM  -->
-            <!-- <ul>
-              <li>
-                <li>
-                  <li>
-
-                  </li>
-                </li>
-              </li>
-            </ul> -->
+          <div v-for="(film,i) in store.films" :key="i" class="col-4">
+            <div class="card">
+              <ul>
+                <!-- <li><img :src="film.poster_path" alt="film-image"></li> -->
+                <li>{{ film.title }}</li>
+                <li>{{ film.original_title }}</li>
+                <li>{{ film.original_language }}</li>
+                <li>{{ parseInt(film.vote_average) }}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -36,3 +35,4 @@ export default {
     @use '../styles/master.scss';
     @use '../styles/secondaryStyles/AppContent.scss'
 </style>
+

@@ -1,13 +1,14 @@
 <script>
 import store from '../../store'
-  // VUE
+// VUE
 export default {
-    name: 'AppHeader',
-    data() {
-        return {
-          store,
-        }
+  emits: ['fetchMovies'],
+  name: 'AppHeader',
+  data() {
+    return {
+      store,
     }
+  }
 }
 </script>
 
@@ -22,8 +23,9 @@ export default {
           <span><a href="#">Soon Online</a></span>
         </div>
         <div class="col-4">
-            <input @keyup.stop="$emit('fetchMovies',store.userSearch)" v-model="store.userSearch" type="text" placeholder="Cerca un Film">
-            <button @click=""><i class="fa-solid fa-magnifying-glass"></i></button>
+          <input @keyup.stop="$emit('fetchMovies')" v-model="store.userSearch" type="text"
+            placeholder="Cerca un Film">
+          <button @click="$emit('fetchMovies')"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </div>
     </div>
@@ -31,6 +33,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-   @use '../styles/master.scss';
-   @use '../styles/secondaryStyles/AppHeader.scss'
+@use '../styles/master.scss';
+@use '../styles/secondaryStyles/AppHeader.scss'
 </style>
