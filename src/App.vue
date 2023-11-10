@@ -15,12 +15,28 @@ export default {
   components: {
     AppHeader,
     AppContent,
+  },
+  methods : {
+    fetchMovies(){
+      axios.get('https://api.themoviedb.org/3/movie',{
+        params: {
+          api_key: store.api_key,
+          query: store.userSearch,
+          language: 'it_IT'
+        }
+
+      })
+      .then(res => {
+        const products = res.data.results;
+        this.store.films = products;
+      });
+    }
   }
 }
 </script>
 
 <template>
-<AppHeader/>
+<AppHeader @fetchMovies="fetchMovies"/>
 <AppContent/>
 </template>
 
