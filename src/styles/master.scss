@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'DM Sans', sans-serif;
+}
+
+body {
+	min-width: 800px;
+	overflow-x: auto;
+}
+
+
+ul,ol,menu {
+	list-style: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+}
+
+.col {
+	justify-content: center;
+	display: flex;
+}
