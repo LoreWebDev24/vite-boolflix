@@ -20,7 +20,8 @@ export default {
 </script>
 
 <template>
-
+<AppHeader/>
+<AppContent/>
 </template>
 
 <style lang="scss">

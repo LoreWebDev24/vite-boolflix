@@ -10,9 +10,12 @@ export default {
 </script>
 
 <template>
-
+    <div class="app-content">
+      
+    </div>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    @use '../styles/master.scss';
+    @use '../styles/secondaryStyles/AppContent.scss'
 </style>
