@@ -20,8 +20,8 @@ export default {
     fetchMovies(){
       axios.get('https://api.themoviedb.org/3/movie',{
         params: {
-          api_key: store.api_key,
-          query: store.userSearch,
+          api_key: this.store.api_key,
+          query: this.store.userSearch,
           language: 'it_IT'
         }
 

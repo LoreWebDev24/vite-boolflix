@@ -22,7 +22,7 @@ export default {
           <span><a href="#">Soon Online</a></span>
         </div>
         <div class="col-4">
-            <input @keyup="$emit('fetchMovies',store.userSearch)" v-model="store.userSearch" type="text" placeholder="Cerca un Film">
+            <input @keyup.stop="$emit('fetchMovies',store.userSearch)" v-model="store.userSearch" type="text" placeholder="Cerca un Film">
             <button @click=""><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </div>
