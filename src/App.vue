@@ -22,7 +22,7 @@ export default {
         params: {
           api_key: this.store.api_key,
           query: this.store.userSearch,
-          language:'en'
+          language:'it-IT'
         }
 
       })
