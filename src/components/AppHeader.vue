@@ -1,9 +1,11 @@
 <script>
+import store from '../../store'
   // VUE
 export default {
     name: 'AppHeader',
     data() {
         return {
+          store,
         }
     }
 }
@@ -20,8 +22,8 @@ export default {
           <span><a href="#">Soon Online</a></span>
         </div>
         <div class="col-4">
-            <input type="text" placeholder="Cerca un Film">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input @keyup="$emit('fetch',store.userSearch)" v-model="store.userSearch" type="text" placeholder="Cerca un Film">
+            <button @click=""><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </div>
     </div>

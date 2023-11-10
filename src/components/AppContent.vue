@@ -1,9 +1,11 @@
 <script>
+import store from '../../store'
   // VUE
 export default {
     name: 'AppContent',
     data() {
         return {
+          store,
         }
     }
 }
@@ -11,7 +13,7 @@ export default {
 
 <template>
     <div class="app-content">
-      
+
     </div>
 </template>
 
