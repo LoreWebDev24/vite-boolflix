@@ -17,7 +17,7 @@ export default {
     <div class="container-fluid">
       <div class="row">
         <div class="col-4">
-          <h2><a href="#">Bool Flix</a></h2>
+          <h2><a href="#">Boolflix</a></h2>
         </div>
         <div class="col-4">
           <span><a href="#">Soon Online</a></span>

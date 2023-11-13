@@ -8,8 +8,15 @@
 .card {
     border: 1px solid white;
     margin-right: 20px;
-    min-height: 500px;
+    height: 500px;
     position: relative;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .row {
@@ -31,8 +38,8 @@ img {
 .card-body-on-hover {
     display: none;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 30%;
+    left: 10%;
     color: white;
 }
 

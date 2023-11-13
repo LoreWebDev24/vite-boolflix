@@ -36,6 +36,7 @@
                     <li>
                         <img class="flags" v-if="store.flags[item.original_language]" :src="store.flags[item.original_language]" alt="">
                     </li>
+                    <li></li>
                     <li>{{ parseInt(item.vote_average) }}</li>
                 </ul>    
             </div>
