@@ -11,6 +11,14 @@ html {
 body {
 	min-width: 950px;
 	overflow-x: auto;
+	background-color: black;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
 }
 
 a {
@@ -55,4 +63,3 @@ img {
 .col-3 {
 	flex-basis: calc(100% / 12 )*3;
 }
-
