@@ -29,7 +29,9 @@
                 <div class="card-body">
                     <li>{{ item.title }}</li>
                     <li>{{ item.original_title }}</li>
-                    <li>{{ item.original_language }}</li>
+                    <li>
+                        <img class="flags" v-if="store.flags[item.original_language]" :src="store.flags[item.original_language]" alt="">
+                    </li>
                     <li>{{ parseInt(item.vote_average) }}</li>
                 </div>
             </ul>
