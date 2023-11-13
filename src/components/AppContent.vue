@@ -1,6 +1,7 @@
 <script>
 import store from '../../store'
 import AppCard from './AppCard.vue'
+import AppPlaceholder from './AppPlaceholder.vue'
   // VUE
 export default {
     name: 'AppContent',
@@ -10,7 +11,8 @@ export default {
         }
     },
     components: {
-    AppCard
+    AppCard,
+    AppPlaceholder
   },
 }
 </script>
@@ -19,6 +21,7 @@ export default {
     <div class="app-content">
       <div class="container">
         <div class="row">
+          <AppPlaceholder/>
           <AppCard v-for="(film,i) in store.films" :key="i" :item="film"/>
           <AppCard v-for="(serie,idx) in store.tvShows" :key="idx" :item="serie"></AppCard>
         </div>

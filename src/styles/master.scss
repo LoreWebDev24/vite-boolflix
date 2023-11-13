@@ -6,17 +6,19 @@
 
 html {
 	font-family: 'DM Sans', sans-serif;
+	min-width: 950px;
 }
 
 body {
-	min-width: 950px;
 	overflow-x: auto;
 	background-color: black;
+	height: 100%;
 }
 
 header {
-	position: fixed;
+	position: sticky;
 	top: 0;
+	left: 0;
 	width: 100%;
 	z-index: 999;
 }
@@ -62,4 +64,11 @@ img {
 
 .col-3 {
 	flex-basis: calc(100% / 12 )*3;
+}
+
+.placeholder {
+    color: white;
+    padding-left: 20px;
+	display: flex;
+	justify-content: center;
 }

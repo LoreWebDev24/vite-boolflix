@@ -56,15 +56,8 @@ export default {
 <template>
 <AppHeader @fetchMovies="fetchMovies"/>
 <AppContent/>
-<div class="placeholder" v-if="!store.films.length && !store.tvShows.length">
-  <span>Benvenuto su Boolflix cerca una serie TV o un Film</span>
-</div>
 </template>
 
 <style lang="scss">
   @use './styles/master.scss';
-  .placeholder {
-    color: white;
-    padding-left: 20px;
-  }
 </style>
