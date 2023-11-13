@@ -18,6 +18,12 @@ export default {
   },
   methods : {
     fetchMovies(){
+      if(this.store.userSearch === '') {
+        store.films = []
+        store.tvShows = []
+        return
+      }
+
       axios.get('https://api.themoviedb.org/3/search/movie',{
         params: {
           api_key: this.store.api_key,
@@ -50,8 +56,15 @@ export default {
 <template>
 <AppHeader @fetchMovies="fetchMovies"/>
 <AppContent/>
+<div class="placeholder" v-if="!store.films.length && !store.tvShows.length">
+  <span>Benvenuto su Boolflix cerca una serie TV o un Film</span>
+</div>
 </template>
 
 <style lang="scss">
   @use './styles/master.scss';
+  .placeholder {
+    color: white;
+    padding-left: 20px;
+  }
 </style>

@@ -8,6 +8,11 @@
               store,
             }
         },
+        computed: { 
+            average(){
+                return parseInt((this.item.vote_average)/2);
+            }
+        },
         props: {
 		item: {
 			type: Object,
@@ -33,17 +38,24 @@
                     <li v-else>{{ item.name }}</li>
                     <li v-if="item.original_title">{{ item.original_title }}</li>
                     <li v-else="">{{ item.original_name }}</li>
-                    <li>
-                        <img class="flags" v-if="store.flags[item.original_language]" :src="store.flags[item.original_language]" alt="">
+                    <li v-if="store.flags[item.original_language]">
+                        <img class="flags" :src="store.flags[item.original_language]" alt="">
                     </li>
-                    <li></li>
-                    <li>{{ parseInt(item.vote_average) }}</li>
-                </ul>    
+                    <li v-else>
+                        <img class="flags" src="../../public/dk.png" alt="">
+                    </li>
+                    <li>
+                        <div stars-vote><span class="stars-vote" v-for="i in average" :key="i"><i class="fa-solid fa-star"></i></span></div>
+                    </li>
+                </ul>                    
             </div>
         </div>
-    </div>
+    </div>      
 </template>
 
 <style lang="scss" scoped>
     @use '../styles/secondaryStyles/AppContent.scss'
 </style>
+ 
+
+
