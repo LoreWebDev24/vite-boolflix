@@ -1,20 +1,15 @@
 .app-content {
     height: calc(100vh - 80px) ;
-    background-color: orange;
+    background-color: black;
     overflow-y: scroll;
     padding: 60px;
 }
 
 .card {
-    border: 1px solid black;
-    padding: 30px;
+    border: 1px solid white;
     margin-right: 20px;
-    border-radius: 18px;
-    min-height: 700px;
-}
-
-.card-body {
-    padding-top: 20px;
+    min-height: 500px;
+    position: relative;
 }
 
 .row {
@@ -23,7 +18,7 @@
 
 img {
     width: 100%;
-    height: 477px;
+    height: 500px;
     object-fit:fill;
 }
 
@@ -32,3 +27,20 @@ img {
     width: 30px;
     height: 25px;
 }
+
+.card-body-on-hover {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: white;
+}
+
+.card:hover .card-body-on-hover{
+	display: block;
+}
+
+.card:hover .card-default{
+	opacity: 0.2;
+}
+

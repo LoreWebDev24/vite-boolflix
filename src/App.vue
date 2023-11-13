@@ -30,6 +30,18 @@ export default {
         const products = res.data.results;
         this.store.films = products;
       });
+      axios.get('https://api.themoviedb.org/3/search/tv',{
+        params: {
+          api_key: this.store.api_key,
+          query: this.store.userSearch,
+          language:'it-IT'
+        }
+
+      })
+      .then(res => {
+        const productsTv = res.data.results;
+        this.store.tvShows = productsTv;
+      });
     }
   }
 }
