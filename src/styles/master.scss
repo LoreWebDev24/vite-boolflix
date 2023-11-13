@@ -28,7 +28,7 @@ img {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -51,3 +51,8 @@ img {
 .col-4 {
 	flex-basis: calc(100% / 12 )*4;
 }
+
+.col-3 {
+	flex-basis: calc(100% / 12 )*3;
+}
+

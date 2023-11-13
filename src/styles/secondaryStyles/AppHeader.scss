@@ -1,9 +1,11 @@
 header {
-    height: 80px;
-    background-color: rgb(229, 9, 20);
+    height: 140px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(red, black);
     color: white;
     border: none;
 }
+
 input {
     width: 50%;
     height: 30px;

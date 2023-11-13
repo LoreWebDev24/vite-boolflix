@@ -18,7 +18,7 @@
 </script>
 
 <template>
-    <div class="col-4">
+    <div class="col-3">
         <div class="card">
             <div class="card-default">
                 <figure v-if="item.poster_path"><img :src="'https://image.tmdb.org/t/p/original'+ item.poster_path"
