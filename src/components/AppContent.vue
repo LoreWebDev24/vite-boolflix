@@ -19,7 +19,7 @@ export default {
     <div class="app-content">
       <div class="container">
         <div class="row">
-          <AppCard/>
+          <AppCard v-for="(film,i) in store.films" :key="i" :item="film"/>
         </div>
       </div>
     </div>
