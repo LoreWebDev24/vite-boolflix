@@ -35,6 +35,7 @@
             </div>
             <div class="card-body-on-hover">
                 <ul>
+<!-- BASTAVA METTERE UN TERNARIO SOLO PER LA FASE DI STUDIO/ DEV HO SCELTO QUESTO APPROCCIO: -->
                     <li v-if="item.title"><h2>{{ item.title }}</h2></li>
                     <li v-else><h2>{{ item.name }}</h2></li>
                     <li v-if="item.original_title">{{ item.original_title }}</li>

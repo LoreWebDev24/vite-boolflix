@@ -33,6 +33,9 @@ export default {
   },
   methods: {
     activeModify(i){ 
+      for (let i = 0 ; i < this.navLinks.length; i++) {
+        this.navLinks[i].active = false
+      }
       this.navLinks[i].active = !this.navLinks[i].active
       console.log(this.navLinks[i].active)
     }
@@ -45,7 +48,7 @@ export default {
     <div class="container-fluid">
       <div class="row">
         <div class="col-4">
-          <h2><a href="#">Boolflix</a></h2>
+          <h1><a href="#">Boolflix</a></h1>
         </div>
         <div class="col-4 flex-column">
           <div class="nav">
