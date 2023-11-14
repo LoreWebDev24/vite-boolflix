@@ -14,7 +14,7 @@ export default {
 <template>
 <div class="placeholder" v-if="!store.films.length && !store.tvShows.length">
     <h2>Benvenuto su Boolflix cerca una serie TV o un Film</h2>
-  </div>
+</div>
 </template>
 
 <style lang="scss" scoped>

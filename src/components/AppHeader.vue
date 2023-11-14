@@ -7,6 +7,7 @@ export default {
   data() {
     return {
       store,
+      activeElement: 0,
       navLinks:  [
         {
           link: 'Home',
@@ -37,6 +38,9 @@ export default {
         this.navLinks[i].active = false
       }
       this.navLinks[i].active = !this.navLinks[i].active
+      this.activeElement = i
+
+      this.$emit('fetchMovies',this.navLinks[this.activeElement].link)
     }
 }
 }
@@ -56,9 +60,9 @@ export default {
           <span><a href="#">Soon Online</a></span>
         </div>
         <div class="col-4">
-          <input @keyup.stop="$emit('fetchMovies')" v-model.trim="store.userSearch" type="text"
+          <input @keyup.stop="$emit('fetchMovies',navLinks[activeElement].link)" v-model.trim="store.userSearch" type="text"
             placeholder="Cerca un Film">
-          <button @click="$emit('fetchMovies')"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button @click="$emit('fetchMovies',navLinks[activeElement].link)"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </div>
     </div>
