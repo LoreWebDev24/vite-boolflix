@@ -9,6 +9,10 @@
     color: goldenrod;
 }
 
+.star-votation {
+    display: flex;
+}
+
 .card {
     margin-right: 20px;
     position: relative;
@@ -41,8 +45,9 @@ img {
 .card-body-on-hover {
     display: none;
     position: absolute;
-    top: 30%;
-    left: 10%;
+    top: 0;
+    left: 0;
+    padding: 30px;
     color: white;
 }
 

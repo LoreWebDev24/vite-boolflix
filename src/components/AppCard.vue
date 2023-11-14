@@ -6,11 +6,12 @@
         data() {
             return {
               store,
+              maxStarstars: 5
             }
         },
         computed: { 
             average(){
-                return parseInt((this.item.vote_average)/2);
+                return Math.ceil((this.item.vote_average)/2);
             }
         },
         props: {
@@ -34,8 +35,8 @@
             </div>
             <div class="card-body-on-hover">
                 <ul>
-                    <li v-if="item.title">{{ item.title }}</li>
-                    <li v-else>{{ item.name }}</li>
+                    <li v-if="item.title"><h2>{{ item.title }}</h2></li>
+                    <li v-else><h2>{{ item.name }}</h2></li>
                     <li v-if="item.original_title">{{ item.original_title }}</li>
                     <li v-else="">{{ item.original_name }}</li>
                     <li v-if="store.flags[item.original_language]">
@@ -44,8 +45,9 @@
                     <li v-else>
                         <img class="flags" src="../../public/dk.png" alt="">
                     </li>
-                    <li>
-                        <div stars-vote><span class="stars-vote" v-for="i in average" :key="i"><i class="fa-solid fa-star"></i></span></div>
+                    <li class="star-votation">
+                        <div><span class="stars-vote" v-for="i in average" :key="i"><i class="fa-solid fa-star"></i></span></div>
+                        <span class="" v-for="emptyStar in 5 - average" :key="emptyStar"><i class="fa-regular fa-star"></i></span>
                     </li>
                 </ul>                    
             </div>
