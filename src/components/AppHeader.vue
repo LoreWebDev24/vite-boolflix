@@ -7,6 +7,7 @@ export default {
   data() {
     return {
       store,
+      navLinks: ['Home','Serie TV','Film','La Mia Lista','Sfoglia per Lingua']
     }
   }
 }
@@ -19,7 +20,10 @@ export default {
         <div class="col-4">
           <h2><a href="#">Boolflix</a></h2>
         </div>
-        <div class="col-4">
+        <div class="col-4 flex-column">
+          <div class="nav">
+            <a v-for="link in navLinks" href="#">{{ link }}</a>
+          </div>
           <span><a href="#">Soon Online</a></span>
         </div>
         <div class="col-4">

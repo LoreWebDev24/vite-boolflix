@@ -37,3 +37,14 @@ button {
     align-items: center;
     height: 100%;
 }
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+    row-gap: 20px;
+}
