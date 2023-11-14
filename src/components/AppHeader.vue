@@ -7,9 +7,36 @@ export default {
   data() {
     return {
       store,
-      navLinks: ['Home','Serie TV','Film','La Mia Lista','Sfoglia per Lingua']
+      navLinks:  [
+        {
+          link: 'Home',
+          active: true
+        },
+        {
+          link: 'Serie TV',
+          active: false
+        },
+        {
+          link: 'Film',
+          active: false
+        },
+        {
+          link: 'La Mia Lista',
+          active: false
+        },
+        {
+          link: 'Sfoglia per Lingua',
+          active: false
+        }
+      ]
     }
-  }
+  },
+  methods: {
+    activeModify(i){ 
+      this.navLinks[i].active = !this.navLinks[i].active
+      console.log(this.navLinks[i].active)
+    }
+}
 }
 </script>
 
@@ -22,7 +49,7 @@ export default {
         </div>
         <div class="col-4 flex-column">
           <div class="nav">
-            <a v-for="link in navLinks" href="#">{{ link }}</a>
+            <a @click="activeModify(i)" :class= "navLinks[i].active === true ? 'active' : ''" v-for="currentObjLink,i in navLinks" :key="i" href="#">{{ currentObjLink.link }}</a>
           </div>
           <span><a href="#">Soon Online</a></span>
         </div>
