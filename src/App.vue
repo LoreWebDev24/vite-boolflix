@@ -35,7 +35,12 @@ export default {
       .then(res => {
         const products = res.data.results;
         this.store.films = products;
-      });
+      })
+      .catch(err => {
+        // console.log(err,err.response)
+        store.films = []
+      })
+
       axios.get('https://api.themoviedb.org/3/search/tv',{
         params: {
           api_key: this.store.api_key,
@@ -47,7 +52,11 @@ export default {
       .then(res => {
         const productsTv = res.data.results;
         this.store.tvShows = productsTv;
-      });
+      })
+      .catch(err => {
+        // console.log(err,err.response)
+        store.tvShows = []
+      })
     }
   }
 }
