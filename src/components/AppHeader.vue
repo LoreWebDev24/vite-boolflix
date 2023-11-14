@@ -37,7 +37,6 @@ export default {
         this.navLinks[i].active = false
       }
       this.navLinks[i].active = !this.navLinks[i].active
-      console.log(this.navLinks[i].active)
     }
 }
 }
