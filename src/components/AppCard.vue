@@ -6,7 +6,7 @@
         data() {
             return {
               store,
-              maxStarstars: 5
+              maxStars: 5
             }
         },
         computed: { 
@@ -48,7 +48,7 @@
                     </li>
                     <li class="star-votation">
                         <div><span class="stars-vote" v-for="i in average" :key="i"><i class="fa-solid fa-star"></i></span></div>
-                        <span class="" v-for="emptyStar in 5 - average" :key="emptyStar"><i class="fa-regular fa-star"></i></span>
+                        <span class="" v-for="emptyStar in maxStars - average" :key="emptyStar"><i class="fa-regular fa-star"></i></span>
                     </li>
                 </ul>                    
             </div>
